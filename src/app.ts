@@ -3,7 +3,7 @@ import { generateRandomId } from "./utils";
 class App {
   private static id = "app";
 
-  public onInit(ele: HTMLElement | null): void {
+  protected onInit(ele: HTMLElement | null): void {
     var id = App.id;
     setInterval(function() {
       if (ele) {
@@ -13,7 +13,7 @@ class App {
   }
 }
 
-App.id;
+new App().onInit;
 
 function main(Component) {
   let ele = document.getElementById(Component.id);
