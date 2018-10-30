@@ -1,13 +1,11 @@
 type ValidSymbol = "#" | "$";
-const symbol: ValidSymbol = "$";
-const hashLength = 7;
 
-function generateRandomId() {
+function generateRandomId(symbol: ValidSymbol, length: number) {
   return (
     symbol +
     Math.random()
       .toString(36)
-      .substr(2, hashLength)
+      .substr(2, length)
   );
 }
 
@@ -15,7 +13,7 @@ function main() {
   let app = document.getElementById("app");
   setInterval(function() {
     if (app) {
-      app.innerHTML = generateRandomId();
+      app.innerHTML = generateRandomId("$", 7);
     }
   }, 1000);
 }

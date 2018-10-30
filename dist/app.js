@@ -1,17 +1,15 @@
 "use strict";
-var symbol = "$";
-var hashLength = 7;
-function generateRandomId() {
+function generateRandomId(symbol, length) {
     return (symbol +
         Math.random()
             .toString(36)
-            .substr(2, hashLength));
+            .substr(2, length));
 }
 function main() {
     var app = document.getElementById("app");
     setInterval(function () {
         if (app) {
-            app.innerHTML = generateRandomId();
+            app.innerHTML = generateRandomId("$", 7);
         }
     }, 1000);
 }
