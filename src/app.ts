@@ -1,5 +1,5 @@
-const symbol: string = "#";
-const hashLength: number = false;
+const symbol: "#" = "#";
+const hashLength: number = 7;
 
 function generateRandomId() {
   return (
