@@ -1,5 +1,10 @@
 import { generateRandomId } from "./utils";
 
+function Component(target) {
+  console.log(target);
+}
+
+@Component
 class App {
   static id = "app";
 
