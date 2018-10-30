@@ -1,4 +1,8 @@
 "use strict";
+function identity(arg) {
+    return arg;
+}
+identity("James");
 function generateRandomId(optionsOrSymbol) {
     if (typeof optionsOrSymbol === "string") {
         return (optionsOrSymbol +
