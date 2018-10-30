@@ -1,9 +1,10 @@
 import { generateRandomId } from "./utils";
 
 class App {
-  public static id = "app";
+  private static id = "app";
 
   public onInit(ele: HTMLElement | null): void {
+    var id = App.id;
     setInterval(function() {
       if (ele) {
         ele.innerHTML = generateRandomId("$", 7);
@@ -11,6 +12,8 @@ class App {
     }, 1000);
   }
 }
+
+App.id;
 
 function main(Component) {
   let ele = document.getElementById(Component.id);
