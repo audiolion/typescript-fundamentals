@@ -5,6 +5,9 @@ function generateRandomId(symbol, length) {
             .toString(36)
             .substr(2, length));
 }
+function userAlert() {
+    alert("hello");
+}
 function main() {
     var app = document.getElementById("app");
     setInterval(function () {
