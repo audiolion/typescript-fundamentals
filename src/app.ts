@@ -9,16 +9,6 @@ function generateRandomId(symbol: ValidSymbol, length: number): string {
   );
 }
 
-function userAlert(): never {
-  alert("hello");
-}
-
-function neverReturns(): never {
-  while (true) {
-    setInterval(() => console.log("hello"), 1000);
-  }
-}
-
 function main() {
   let app = document.getElementById("app");
   setInterval(function() {

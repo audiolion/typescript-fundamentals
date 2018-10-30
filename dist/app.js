@@ -5,14 +5,6 @@ function generateRandomId(symbol, length) {
             .toString(36)
             .substr(2, length));
 }
-function userAlert() {
-    throw new Error("fail");
-}
-function neverReturns() {
-    while (true) {
-        setInterval(function () { return console.log("hello"); }, 1000);
-    }
-}
 function main() {
     var app = document.getElementById("app");
     setInterval(function () {
