@@ -1,9 +1,11 @@
 import { generateRandomId } from "./utils";
 
 class App {
+  private readonly foo = "bar";
   private static id = "app";
 
   protected onInit(ele: HTMLElement | null): void {
+    this.foo = "x";
     var id = App.id;
     setInterval(function() {
       if (ele) {
