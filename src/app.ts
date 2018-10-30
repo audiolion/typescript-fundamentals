@@ -25,10 +25,6 @@ class App {
   }
 }
 
-for (let key in App.prototype) {
-  console.log(key);
-}
-
 function main(Component) {
   let ele = document.getElementById(Component.id);
   const App = new Component();
