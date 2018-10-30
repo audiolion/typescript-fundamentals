@@ -9,7 +9,7 @@ function generateRandomId(symbol: ValidSymbol, length: number): string {
   );
 }
 
-function userAlert() {
+function userAlert(): void {
   alert("hello");
 }
 
