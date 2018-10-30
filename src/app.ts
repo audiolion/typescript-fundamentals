@@ -1,4 +1,4 @@
-var symbol = "#";
+var symbol: "#" | "$" = "$";
 const hashLength = 7;
 
 function generateRandomId() {
