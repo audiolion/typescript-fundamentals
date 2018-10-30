@@ -1,0 +1,7 @@
+{
+  "name": "typescript-fundamentals",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ryan Castner <castner.rr@gmail.com>",
+  "license": "MIT"
+}
