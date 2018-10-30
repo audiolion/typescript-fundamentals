@@ -1,9 +1,11 @@
 "use strict";
+var symbol = "#";
+var hashLength = 7;
 function generateRandomId() {
-    return ("#" +
+    return (symbol +
         Math.random()
             .toString(36)
-            .substr(2, 7));
+            .substr(2, hashLength));
 }
 function main() {
     var app = document.getElementById("app");
