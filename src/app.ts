@@ -1,9 +1,18 @@
 import { generateRandomId } from "./utils";
 
-class App {
+class Component {
+  constructor() {
+    this.log();
+  }
+  log() {
+    console.log("Component created");
+  }
+}
+
+class App extends Component {
   static id = "app";
 
-  onInit(ele) {
+  onInit(ele: HTMLElement | null): void {
     setInterval(function() {
       if (ele) {
         ele.innerHTML = generateRandomId("$", 7);
