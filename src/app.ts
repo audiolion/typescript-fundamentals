@@ -15,6 +15,12 @@ class App {
 
 new App().onInit;
 
+class Foo extends App {
+  bar() {
+    this.onInit;
+  }
+}
+
 function main(Component) {
   let ele = document.getElementById(Component.id);
   const App = new Component();
