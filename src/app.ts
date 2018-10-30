@@ -1,4 +1,5 @@
-var symbol: "#" | "$" | "@" = "@";
+type ValidSymbol = "#" | "$";
+const symbol: ValidSymbol = "$";
 const hashLength = 7;
 
 function generateRandomId() {

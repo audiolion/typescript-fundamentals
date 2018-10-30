@@ -1,6 +1,6 @@
 "use strict";
-var symbol = "#";
-var hashLength = false;
+var symbol = "$";
+var hashLength = 7;
 function generateRandomId() {
     return (symbol +
         Math.random()
