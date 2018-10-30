@@ -1,22 +1,11 @@
 "use strict";
-function generateRandomId(optionsOrSymbol) {
-    if (typeof optionsOrSymbol === "string") {
-        return (optionsOrSymbol +
-            Math.random()
-                .toString(36)
-                .substr(2, length));
-    }
-    return (optionsOrSymbol.symbol +
-        Math.random()
-            .toString(36)
-            .substr(2, optionsOrSymbol.length));
-}
-generateRandomId("#", 7);
+Object.defineProperty(exports, "__esModule", { value: true });
+var utils_1 = require("./utils");
 function main() {
     var app = document.getElementById("app");
     setInterval(function () {
         if (app) {
-            app.innerHTML = generateRandomId({ symbol: "$", length: 7 });
+            app.innerHTML = utils_1.generateRandomId("$", 7);
         }
     }, 1000);
 }

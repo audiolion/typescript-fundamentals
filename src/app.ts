@@ -1,38 +1,10 @@
-type ValidSymbol = "#" | "$";
-
-interface GenerateConfig {
-  symbol: ValidSymbol;
-  length: number;
-}
-
-function generateRandomId(symbol: ValidSymbol, length: number): string;
-function generateRandomId(options: GenerateConfig): string;
-function generateRandomId(
-  optionsOrSymbol: ValidSymbol | GenerateConfig
-): string {
-  if (typeof optionsOrSymbol === "string") {
-    return (
-      optionsOrSymbol +
-      Math.random()
-        .toString(36)
-        .substr(2, length)
-    );
-  }
-  return (
-    optionsOrSymbol.symbol +
-    Math.random()
-      .toString(36)
-      .substr(2, optionsOrSymbol.length)
-  );
-}
-
-generateRandomId("#", 7);
+import { generateRandomId } from "./utils";
 
 function main() {
   let app = document.getElementById("app");
   setInterval(function() {
     if (app) {
-      app.innerHTML = generateRandomId({ symbol: "$", length: 7 });
+      app.innerHTML = generateRandomId("$", 7);
     }
   }, 1000);
 }
