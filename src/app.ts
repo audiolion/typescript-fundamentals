@@ -1,6 +1,6 @@
 type ValidSymbol = "#" | "$";
 
-function generateRandomId(symbol: ValidSymbol, length: number) {
+function generateRandomId(symbol: ValidSymbol, length: number): string {
   return (
     symbol +
     Math.random()
