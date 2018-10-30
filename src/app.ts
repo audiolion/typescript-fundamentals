@@ -2,15 +2,20 @@ import { generateRandomId } from "./utils";
 
 class App {
   static id = "app";
+
+  onInit(ele) {
+    setInterval(function() {
+      if (ele) {
+        ele.innerHTML = generateRandomId("$", 7);
+      }
+    }, 1000);
+  }
 }
 
 function main(Component) {
-  let app = document.getElementById(Component.id);
-  setInterval(function() {
-    if (app) {
-      app.innerHTML = generateRandomId("$", 7);
-    }
-  }, 1000);
+  let ele = document.getElementById(Component.id);
+  const App = new Component();
+  App.onInit(ele);
 }
 
 main(App);
