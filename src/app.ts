@@ -9,8 +9,8 @@ function generateRandomId(symbol: ValidSymbol, length: number): string {
   );
 }
 
-function userAlert(): void {
-  alert("hello");
+function userAlert(): never {
+  throw new Error("fail");
 }
 
 function main() {

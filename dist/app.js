@@ -6,7 +6,7 @@ function generateRandomId(symbol, length) {
             .substr(2, length));
 }
 function userAlert() {
-    alert("hello");
+    throw new Error("fail");
 }
 function main() {
     var app = document.getElementById("app");
