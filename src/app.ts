@@ -1,9 +1,9 @@
 import { generateRandomId } from "./utils";
 
 class App {
-  static id = "app";
+  public static id = "app";
 
-  onInit(ele: HTMLElement | null): void {
+  public onInit(ele: HTMLElement | null): void {
     setInterval(function() {
       if (ele) {
         ele.innerHTML = generateRandomId("$", 7);
