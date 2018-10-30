@@ -1,5 +1,6 @@
 "use strict";
 function generateRandomId(symbol, length) {
+    length = length || 7;
     return (symbol +
         Math.random()
             .toString(36)
