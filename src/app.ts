@@ -7,8 +7,9 @@ class App {
   }
 }
 
-function main() {
-  let app = document.getElementById("app");
+function main(Component) {
+  const cmp = new Component();
+  let app = document.getElementById(cmp.id);
   setInterval(function() {
     if (app) {
       app.innerHTML = generateRandomId("$", 7);
@@ -16,4 +17,4 @@ function main() {
   }, 1000);
 }
 
-main();
+main(App);
