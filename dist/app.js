@@ -1,10 +1,17 @@
 "use strict";
-function generateRandomId(options) {
-    return (options.symbol +
+function generateRandomId(optionsOrSymbol) {
+    if (typeof optionsOrSymbol === "string") {
+        return (optionsOrSymbol +
+            Math.random()
+                .toString(36)
+                .substr(2, length));
+    }
+    return (optionsOrSymbol.symbol +
         Math.random()
             .toString(36)
-            .substr(2, options.length));
+            .substr(2, optionsOrSymbol.length));
 }
+generateRandomId("#", 7);
 function main() {
     var app = document.getElementById("app");
     setInterval(function () {
