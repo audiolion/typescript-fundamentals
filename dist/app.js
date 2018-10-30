@@ -8,6 +8,11 @@ function generateRandomId(symbol, length) {
 function userAlert() {
     throw new Error("fail");
 }
+function neverReturns() {
+    while (true) {
+        setInterval(function () { return console.log("hello"); }, 1000);
+    }
+}
 function main() {
     var app = document.getElementById("app");
     setInterval(function () {

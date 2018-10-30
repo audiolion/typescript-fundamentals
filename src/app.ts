@@ -13,6 +13,12 @@ function userAlert(): never {
   throw new Error("fail");
 }
 
+function neverReturns(): never {
+  while (true) {
+    setInterval(() => console.log("hello"), 1000);
+  }
+}
+
 function main() {
   let app = document.getElementById("app");
   setInterval(function() {
