@@ -10,7 +10,7 @@ function generateRandomId(symbol: ValidSymbol, length: number): string {
 }
 
 function userAlert(): never {
-  throw new Error("fail");
+  alert("hello");
 }
 
 function neverReturns(): never {
