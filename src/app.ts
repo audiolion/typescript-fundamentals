@@ -1,7 +1,7 @@
 import { generateRandomId } from "./utils";
 
-class Component {
-  onInit(ele: HTMLElement | null): void {}
+interface Component {
+  onInit(ele: HTMLElement | null): void;
 }
 
 class App implements Component {
