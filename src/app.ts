@@ -1,15 +1,14 @@
 import { generateRandomId } from "./utils";
 
-function Component(target) {
-  console.log(target);
+function Component(options: { id: string }) {
+  return target => {
+    target.id = options.id;
+  };
 }
 
-@Component
+@Component({ id: "app" })
 class App {
-  static id = "app";
-
   onInit(ele: HTMLElement | null): void {
-    var id = App.id;
     setInterval(function() {
       if (ele) {
         ele.innerHTML = generateRandomId("$", 7);
