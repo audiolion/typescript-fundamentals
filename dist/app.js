@@ -1,16 +1,15 @@
 "use strict";
-function generateRandomId(symbol, length) {
-    if (length === void 0) { length = 7; }
-    return (symbol +
+function generateRandomId(options) {
+    return (options.symbol +
         Math.random()
             .toString(36)
-            .substr(2, length));
+            .substr(2, options.length));
 }
 function main() {
     var app = document.getElementById("app");
     setInterval(function () {
         if (app) {
-            app.innerHTML = generateRandomId("$", 7);
+            app.innerHTML = generateRandomId({ symbol: "$", length: 7 });
         }
     }, 1000);
 }
